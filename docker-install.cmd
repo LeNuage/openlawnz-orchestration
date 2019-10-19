@@ -11,7 +11,7 @@ docker pull postgres
 docker run --name openlawnz-postgres -p5432:5432 -v %DB_MOUNT_VOLUME%:/var/lib/postgresql/data -d postgres
 
 ECHO "Downloading latest OpenLaw NZ database"
-curl -o openlawnzdb.sql <URL provided by volunteering with OpenLaw NZ>
+curl -o openlawnzdb.sql https:<URL provided by volunteering with OpenLaw NZ>
 
 ECHO "Copying database into docker"
 docker cp openlawnzdb.sql openlawnz-postgres:/tmp
